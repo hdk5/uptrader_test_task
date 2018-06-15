@@ -1,0 +1,12 @@
+{% load treemenu_tags %}
+<ul>
+{% for menu, attrs in menutree.items %}
+{# {{ menu.title }} ({{ menu.url }}: {{ attrs }} #}
+<li>
+    <a href="{{ menu.url }}"> {{ menu.title }} </a>
+    {% if attrs.active %}
+    {% draw_submenu attrs.children %}
+    {% endif %}
+</li>
+{% endfor %} 
+</ul>

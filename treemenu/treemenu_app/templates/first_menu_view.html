@@ -1,0 +1,11 @@
+{% load treemenu_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {{ request.path }}
+    {% draw_menu 'main_menu' %}
+</body>
+</html>
